@@ -75,7 +75,7 @@ export function Api() {
                         
                     }}
                     // value={city}
-                    placeholder='Enter City Name ex: Kathmandu'
+                    placeholder='Search More City: Pokhara,London...'
                 />
                 <button
                     className='rounded-xl bg-orange-500 m-5 w-20 h-10 text-xl'
