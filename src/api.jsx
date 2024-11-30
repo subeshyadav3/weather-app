@@ -1,10 +1,13 @@
+import { useEffect } from 'preact/hooks';
 import { useState } from 'react';
 
 export function Api() {
-    const [city, setCity] = useState("");
+    const [city, setCity] = useState("Kathmandu");
     const [data, setData] = useState(null);  
     const [show,setShow]=useState(null);
-
+    useEffect(()=>{
+        getWeather();
+    })
     async function getWeather() {
         setShow(city)
         try {
@@ -44,7 +47,7 @@ export function Api() {
                 </button>
             </div>
             <div className='m-2 pl-10 h-10 text-2xl w-full flex flex-row'>
-                <p>{data?"Showing Result For ":""}</p>
+                <p>{data?"Showing Result For ":"No Data Available"}</p>
                 <p className='ml-2 text-green-700'>{show}</p>
             </div>
             <div className='p-5 w-full'>
@@ -63,9 +66,7 @@ export function Api() {
                         <p>Speed: {data.wind.speed} </p>
                        
                     </div>
-                ) : (
-                    <p>{data?"No data available":""}</p>  
-                )}
+                ) : ""}
             </div>
         </div>
     );
