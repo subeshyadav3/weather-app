@@ -7,7 +7,7 @@ export function Api() {
     const [show,setShow]=useState(null);
     useEffect(()=>{
         getWeather();
-    })
+    },[])
     async function getWeather() {
         setShow(city)
         try {
