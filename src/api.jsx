@@ -65,11 +65,11 @@ export function Api() {
         );
     }
     return (
-        <div className='flex flex-col justify-center items-center'>
-            <div className='w-full p-5 flex flex-row justify-center items-center gap-1 mt-5'>
+        <div className='flex flex-col justify-center items-center '>
+            <div className=' p-5 flex flex-row justify-center items-center gap-1 mt-5'>
                 <input
                     type="text"
-                    className='w-[400px] rounded-xl h-10 text-black p-2'
+                    className=' rounded-xl h-10 text-black p-2 sm:w-[400px]'
                     onChange={(e) => {
                         setCity(e.target.value)
                         
@@ -89,7 +89,7 @@ export function Api() {
                 <p className='ml-2 text-green-700'>{show}</p>
             </div>
             <div className='p-5 w-full flex flex-row'>
-                <div className='w-1/2'>
+                <div className='w-1/2 mr-5'>
                     
                     {data ? (
                         <div>
